@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 class AppHeader extends React.Component {
   render() {
@@ -17,8 +18,8 @@ class AppHeader extends React.Component {
               id="basic-nav-dropdown"
             >
               <NavDropdown.Item href="#action/3.1">
-                <FontAwesomeIcon icon="user" />
-                Action
+                <FontAwesomeIcon icon={faUser} />
+                <span className="item-title">Action</span>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action

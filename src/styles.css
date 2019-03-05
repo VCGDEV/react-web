@@ -47,3 +47,7 @@ a:visited {
   padding-top: 5px;
   padding-left: 5px;
 }
+
+.item-title {
+  padding-left: 10px;
+}
