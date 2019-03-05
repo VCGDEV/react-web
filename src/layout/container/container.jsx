@@ -12,7 +12,9 @@ class Container extends React.Component {
         <div className="header">
           <AppHeader />
         </div>
-        <div className="content" />
+        <div className="content">
+          <p>Some content here</p>
+        </div>
       </div>
     );
   }
