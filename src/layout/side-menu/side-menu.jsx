@@ -5,7 +5,7 @@ const menu = [
   {
     icon: "icon-class-name",
     label: "Home",
-    to: "#a-link"
+    to: "#customers"
   },
   {
     icon: "icon-class-name",
@@ -19,6 +19,11 @@ const menu = [
       {
         icon: "icon-class-name",
         label: "Profiles",
+        to: "#another-link"
+      },
+      {
+        icon: "icon-class-name",
+        label: "Users",
         to: "#another-link"
       }
     ]
