@@ -2,6 +2,9 @@ import React from "react";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCog } from "@fortawesome/free-solid-svg-icons";
+import { faInbox } from "@fortawesome/free-solid-svg-icons";
+import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
 class AppHeader extends React.Component {
   render() {
@@ -19,15 +22,20 @@ class AppHeader extends React.Component {
             >
               <NavDropdown.Item href="#action/3.1">
                 <FontAwesomeIcon icon={faUser} />
-                <span className="item-title">Action</span>
+                <span className="item-title">My Profile</span>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                <FontAwesomeIcon icon={faInbox} />
+                <span className="item-title">Inbox</span>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+                <FontAwesomeIcon icon={faCog} />
+                <span className="item-title">Change Password</span>
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                <FontAwesomeIcon icon={faSignOutAlt} />
+                <span className="item-title">Sign Out</span>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
