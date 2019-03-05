@@ -1,5 +1,6 @@
 import React from "react";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class AppHeader extends React.Component {
   render() {
@@ -9,15 +10,16 @@ class AppHeader extends React.Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
           <Nav>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown
               size="sm"
               alignRight
-              title="Dropdown"
+              title="vcgdev"
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+                <FontAwesomeIcon icon="user" />
+                Action
+              </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
