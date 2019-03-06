@@ -4,7 +4,7 @@
 }
 
 .menu {
-  width: 200px;
+  width: 213px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -40,7 +40,7 @@ a:visited {
 
 .content {
   margin-top: 58px;
-  margin-left: 200px;
+  margin-left: 213px;
   position: fixed;
   width: 100%;
   height: 100%;

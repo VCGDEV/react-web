@@ -3,28 +3,64 @@ import MetisMenu from "react-metismenu";
 
 const menu = [
   {
-    icon: "icon-class-name",
+    icon: "home",
     label: "Home",
+    to: "#home"
+  },
+  {
+    icon: "user-cog",
+    label: "Customers",
     to: "#customers"
   },
   {
-    icon: "icon-class-name",
+    icon: "users",
+    label: "Users",
+    to: "#users"
+  },
+  {
+    icon: "file-invoice",
+    label: "Invoices",
+    to: "#invoices"
+  },
+  {
+    icon: "box",
+    label: "Applications",
+    to: "#applications"
+  },
+  {
+    icon: "gifts",
+    label: "Products",
+    to: "#products"
+  },
+  {
+    icon: "cog",
     label: "Configurations",
     content: [
       {
-        icon: "icon-class-name",
+        icon: "cubes",
         label: "Modules",
-        to: "#another-link"
+        to: "#modules"
       },
       {
-        icon: "icon-class-name",
+        icon: "bezier-curve",
         label: "Profiles",
-        to: "#another-link"
+        to: "#profiles"
       },
       {
-        icon: "icon-class-name",
-        label: "Users",
-        to: "#another-link"
+        icon: "key",
+        label: "Authorizations",
+        to: "#authorizations"
+      },
+      {
+        icon: "folder-plus",
+        label: "Catalogs",
+        content: [
+          {
+            icon: "user",
+            label: "User Extra Data",
+            to: "#catalogs/users_data"
+          }
+        ]
       }
     ]
   }
