@@ -4,7 +4,7 @@ class CustomerList extends React.Component {
   render() {
     return (
       <div>
-        <p>Some Text</p>
+        <p>Customers</p>
       </div>
     );
   }

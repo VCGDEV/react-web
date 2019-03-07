@@ -1,26 +1,31 @@
 import React from "react";
 import MetisMenu from "react-metismenu";
-
+import { adminRole } from "../../roles-sec";
+import hasPermission from "../../has-permission";
 const menu = [
   {
     icon: "home",
     label: "Home",
-    to: "#home"
+    to: "#",
+    permission: "VIEW_HOME"
   },
   {
     icon: "user-cog",
     label: "Customers",
-    to: "#customers"
+    to: "#customers",
+    permission: "VIEW_CUSTOMERS"
   },
   {
     icon: "users",
     label: "Users",
-    to: "#users"
+    to: "#users",
+    permission: "VIEW_USERS"
   },
   {
     icon: "file-invoice",
     label: "Invoices",
-    to: "#invoices"
+    to: "#invoices",
+    permission: "VIEW_INVOICES"
   },
   {
     icon: "box",
@@ -68,10 +73,18 @@ const menu = [
 class SideMenu extends React.Component {
   constructor() {
     super();
-    this.state = { menu: menu };
+    this.state = { menu: menu, role: adminRole };
   }
   render() {
-    return <MetisMenu content={this.state.menu} activeLinkFromLocation />;
+    let menu = this.state.menu;
+    let role = this.state.role;
+    menu = menu.filter(m => {
+      if (hasPermission(role.permissions, m.permission)) return m;
+      else console.log(`Not authorized to: ${m.label}`);
+    });
+
+    console.log(menu);
+    return <MetisMenu content={menu} activeLinkFromLocation />;
   }
 }
 

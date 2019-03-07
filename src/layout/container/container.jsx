@@ -3,6 +3,7 @@ import "style.css";
 import SideMenu from "../side-menu/side-menu";
 import AppHeader from "../header/app-header";
 import CustomerList from "../../pages/customers/customer-list";
+import Home from "../../pages/home/home";
 import { HashRouter, Route } from "react-router-dom";
 
 class Container extends React.Component {
@@ -17,6 +18,7 @@ class Container extends React.Component {
             <AppHeader />
           </div>
           <div className="content">
+            <Route exact path="/" component={Home} />
             <Route exact path="/customers" component={CustomerList} />
           </div>
         </div>
