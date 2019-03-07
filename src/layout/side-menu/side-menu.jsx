@@ -77,13 +77,8 @@ class SideMenu extends React.Component {
   }
   render() {
     let menu = this.state.menu;
-    let role = this.state.role;
-    menu = menu.filter(m => {
-      if (hasPermission(role.permissions, m.permission)) return m;
-      else console.log(`Not authorized to: ${m.label}`);
-    });
-
-    console.log(menu);
+    const role = this.state.role;
+    menu = menu.filter(m => hasPermission(role.permissions, m.permission));
     return <MetisMenu content={menu} activeLinkFromLocation />;
   }
 }
