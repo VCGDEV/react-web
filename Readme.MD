@@ -1,4 +1,4 @@
-React application
+## React application
   - Modules
   - Profiles
   - Authorizations
