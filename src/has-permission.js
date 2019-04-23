@@ -1,7 +1,6 @@
 export const check = (roles, role, action, data) => {
-  if (!role) return false;
-  const permissions = roles.indexOf(role);
-  return permissions | false;
+  if (!role) return true; //no role required for view
+  return roles.indexOf(role) !== -1;
 };
 
 const hasPermission = (roles, permission) => check(roles, permission);

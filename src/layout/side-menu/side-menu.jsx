@@ -6,8 +6,7 @@ const menu = [
   {
     icon: "home",
     label: "Home",
-    to: "#",
-    permission: "VIEW_HOME"
+    to: "#"
   },
   {
     icon: "user-cog",
@@ -30,7 +29,8 @@ const menu = [
   {
     icon: "box",
     label: "Applications",
-    to: "#applications"
+    to: "#applications",
+    permission: "VIEW_APPS"
   },
   {
     icon: "gifts",
