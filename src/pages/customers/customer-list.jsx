@@ -1,12 +1,15 @@
 import React from "react";
-import { AgGridReact } from "ag-grid-react";
-import "ag-grid-community/dist/styles/ag-grid.css";
-import "ag-grid-community/dist/styles/ag-theme-balham.css";
-
+import TableContainer from "../../layout/main/container/table-container";
 class CustomerList extends React.Component {
   constructor(props) {
     super(props);
+    this.clickBtn = this.clickBtn.bind(this);
     this.state = {
+      pageData: {
+        pageTitle: "Customers",
+        buttonLegend: "Add",
+        action: this.clickBtn
+      },
       columnDefs: [
         {
           headerName: "Make",
@@ -48,19 +51,17 @@ class CustomerList extends React.Component {
   }
   render() {
     return (
-      <div
-        className="ag-theme-balham"
-        style={{
-          height: "100%",
-          width: "100%"
-        }}
-      >
-        <AgGridReact
-          columnDefs={this.state.columnDefs}
-          rowData={this.state.rowData}
-        />
-      </div>
+      <TableContainer
+        columns={this.state.columnDefs}
+        data={this.state.rowData}
+        pageData={this.state.pageData}
+        onClick={this.clickBtn}
+      />
     );
+  }
+
+  clickBtn() {
+    console.log("This is a test");
   }
 }
 
